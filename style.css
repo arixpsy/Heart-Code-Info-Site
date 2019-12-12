@@ -171,6 +171,8 @@ footer{
 }
 footer > p:first-child{
     font-family: 'Pacifico', cursive;
+}
+.heart{
     color: crimson;
 }
 footer > p{
