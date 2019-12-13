@@ -113,7 +113,7 @@ section{
     height: 300px;
 }
 #background-banner{
-    background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9');
+    background-image:url('./assets/images/projectheartcode-2019.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -258,6 +258,15 @@ footer > p{
     overflow-x: hidden;
     background-position: center;
     background-size: cover;
+}
+#background-aboutus{
+    background-image:url('./assets/images/orgcomm-1.JPG');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width:100%;
+    position: absolute;
 }
 @media screen and (min-width: 700px) {
     .nav-inner{

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Heartcode</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav-inner">
+            <div id="nav-logo-wrapper">
+                <a href="index.html" id="nav-logo">Project Heartcode</a>
+            </div>
+            <div id="nav-drawer">
+                <label id="nav-drawer-icon">
+                    <div class="nav-drawer-bar"></div>
+                    <div class="nav-drawer-bar"></div>
+                    <div class="nav-drawer-bar"></div>
+                </label>
+            </div>
+            <ul id="nav-links">
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="section1">
+        <style>
+            #development-wrapper{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50vh 50vh;
+                align-items: center;
+                justify-items: center;
+            }
+            #development-wrapper > div > img{
+                width: 100%;
+                height: calc(50vh - 40px);
+            }
+            .development-wrapper-tile{
+                padding: 20px;
+            }
+            @media screen and (min-width: 700px) {
+                #development-wrapper{
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 100vh;
+                }
+                .development-wrapper-tile{
+                padding: 30px;
+                }
+                #development-wrapper > div > img{
+                width: 100%;
+            }
+            }
+        </style>
+        <div id="development-wrapper">
+            <div class="development-wrapper-tile"><h1>Sorry! The site is under development.</h1></div>
+            <div class="development-wrapper-tile"><img src="./assets/images/undraw_under_construction_46pa.svg"/></div>
+        </div>
+    </section>
+    <footer>
+        <p><span class="heart">❤</span> Project Heartcode <span class="heart">❤</span></p>
+        <div id="social-media">
+            <a href="https://www.instagram.com/smuheartcode/"><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-facebook-square"></i></a>  
+        </div>
+        <p><span class="heart">❤</span> SMU SIS Community Service Project <span class="heart">❤</span></p>
+    </footer>
+</body>
+</html>
