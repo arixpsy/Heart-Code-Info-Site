@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project HeartCode</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.css" rel="stylesheet">
+  <style>
+      .bell {
+          display: block;
+          width: 200px;
+          height: 200px;
+          font-size: 200px;
+          margin: 50px auto 0;
+          color: #9e9e9e;
+          transform-origin: 50% 4px;
+      }
+    
+    
+      @keyframes ring {
+          0% {
+              transform: rotate(0);
+          }
+    
+          1% {
+              transform: rotate(30deg);
+          }
+    
+          3% {
+              transform: rotate(-28deg);
+          }
+    
+          5% {
+              transform: rotate(34deg);
+          }
+    
+          7% {
+              transform: rotate(-32deg);
+          }
+    
+          9% {
+              transform: rotate(30deg);
+          }
+    
+          11% {
+              transform: rotate(-28deg);
+          }
+    
+          13% {
+              transform: rotate(26deg);
+          }
+    
+          15% {
+              transform: rotate(-24deg);
+          }
+    
+          17% {
+              transform: rotate(22deg);
+          }
+    
+          19% {
+              transform: rotate(-20deg);
+          }
+    
+          21% {
+              transform: rotate(18deg);
+          }
+    
+          23% {
+              transform: rotate(-16deg);
+          }
+    
+          25% {
+              transform: rotate(14deg);
+          }
+    
+          27% {
+              transform: rotate(-12deg);
+          }
+    
+          29% {
+              transform: rotate(10deg);
+          }
+    
+          31% {
+              transform: rotate(-8deg);
+          }
+    
+          33% {
+              transform: rotate(6deg);
+          }
+    
+          35% {
+              transform: rotate(-4deg);
+          }
+    
+          37% {
+              transform: rotate(2deg);
+          }
+    
+          39% {
+              transform: rotate(-1deg);
+          }
+    
+          41% {
+              transform: rotate(1deg);
+          }
+    
+          43% {
+              transform: rotate(0);
+          }
+    
+          100% {
+              transform: rotate(0);
+          }
+      }
+    </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Project HeartCode</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Our Beneficiary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Issues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#demo">Prototype Demo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div  class="intro-text" >
+        <div style="background-color: rgba(0, 0, 0, 0.6); ">
+          <div  class="intro-lead-in">Lend your eyes to the blind</div>
+          <div  class="intro-heading text-uppercase">Be My Eyes</div>
+        </div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Click on Me</a>
+      
+      </div>
+    </div>
+  </header>
+
+
+<!-- Beneficiary  -->
+<section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Beneficiary</h2>
+          <h3 class="section-subheading text-muted">People who are visually impact</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" style="height:280px; width: 1000px;" src="img/portfolio/beneficiary.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Beneficiary</h4>
+            <p class="text-muted">Who are our target group</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" style="height:280px; width: 1000px;" src="img/portfolio/definition.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Causes</h4>
+            <p class="text-muted">What cause blindness</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" style="height:280px; width: 1000px;" src="img/portfolio/statistics.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Statistics</h4>
+            <p class="text-muted">Number of visually impact people</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="page-section" id="services" style="background-color: rgba(204, 197, 197, 0.4) !important; padding: 80px 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Issues</h2>
+          <h3 class="section-subheading text-muted"></h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-fire-alt fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Prevent Burn from Cooking</h4>
+          <p class="text-muted">Visually impact people are not able to see the hot objects in kitchen, so they might get burnt when they cook.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-store fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading"> Cook Safely </h4>
+          <p class="text-muted">Allowing the visually impact people to cook safely at home as the temperature sensor from thewill alert them if they are too close to a hot object.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Increase Surroundings Awareness</h4>
+          <p class="text-muted">Visually impact people who wear bracelets would be able to know more about their surroundings and prevent injuries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About -->
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Solutions</h2>
+          <h3 class="section-subheading text-muted">Innovative ideas to help visually impact people to protect themselves.<br> <br>
+            We came out an idea with a bracelet that would help them stay away from hot objects and to ensure their safty</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/bracelet.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Functionality</h3>
+                  <h4 class="subheading">How does it work</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">The bracelet is a wearable device. It will detect the temperature of the warm objects. If the temperature of the hot object is higher than 80 degree and the distance is closer to visually impact people, it will alert them with high pitch sound and vibration. </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/arm.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Usability</h3>
+                  <h4 class="subheading">How should they use it</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Visually impact people will wear it all the time.  When they approach hot objects, they would alert by the sound and vibration from the bracelet.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/about/safety.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3>Impact</h3>
+                  <h4 class="subheading">How can they benefit</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Visually impact people can move freely at home without worrying about getting burnt or injuried.</p>
+                </div>
+              </div>
+            </li>
+  
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Prototype
+                  <br>Demo</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Prototype Demo  -->
+<section class="bg-light page-section" id="demo"  style="background-color: rgba(204, 197, 197, 0.4) !important;padding: 30px 0;">
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-12 text-center" >
+          <h2 class="section-heading text-uppercase">Prototype Demo</h2>
+          <h3>Visually impact lady is walking towards the hot object </h3>
+          <div  id = "prototype-image" style="height:500px; width: 1200px;background-position: center; position: relative;" >
+            <br><br><br><br><br><br><br><br>
+            <img class="img-fluid" style="height:300px; width: 300px;position:absolute;margin-left: -450px;" src="img/man.png" alt="" id="lady" >
+            <img class="img-fluid" style="height:100px; width: 100px;position:absolute;margin:40px;" src="img/pot.png" alt="" >
+            
+            <script>   
+
+                function audio(){
+                  var audio = new Audio('img/audio_edited.mp3');
+                  audio.play();
+                }
+
+                function stop(){
+                  audio.stop();
+                }
+
+                function demo() {
+                  var move_amount = 10;
+                  var lady = document.getElementById("lady");
+                  var ladyMarginLeft = -450;
+                  setInterval(function () {
+                    if (ladyMarginLeft > -140) {
+                      clearInterval();
+                      setInterval(() => {
+                        // $.ajax({url: 'http://192.168.137.236:1880/test',
+                          // success: function (data) {
+                            var element = document.getElementById('lady');
+                            var text = document.getElementById('explan-animation')
+                            
+                            // document.getElementById('caption').innerHTML = "";
+                            // if (data["temp_details"] == "hot"){
+                              
+                              element.style.animation = 'ring 4s 0.7s ease-in-out';
+                              audio()
+                              document.getElementById('caption').innerHTML = 'The pot is hot and the lady receives notification with the bracelet vibrating and sound.'
+                            // }
+                            // else{
+                              // element.style.animation = 'None';
+                              // document.getElementById('caption').innerHTML = 'The pot is not hot and no action is taken.'
+                            // }
+                        //   }
+                        // });
+                      }, 1000);
+                    } else {
+                      ladyMarginLeft += move_amount;
+                      lady.style.marginLeft = ladyMarginLeft + "px";
+                      console.log(ladyMarginLeft);
+                    }
+                  }, 50);
+                }     
+            </script>
+          </div>
+        </div>
+      </div>
+      <div>  
+      <h1 id="result"></h1>
+      <button onclick="demo()" type="button" class="btn btn-warning">Start</button>
+      <!-- <button onclick="stop()" type="button" class="btn btn-warning">Stop</button> -->
+      <p id="caption" style="text-align: center; font-size:30px"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="bg-light page-section" id="team" style=" padding: 30px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h3 class="section-subheading text-muted"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/turtle.jpg" alt="">
+            <h4>Xue En</h4>
+            <p class="text-muted">Idea Generator & Designer & Coder</p>
+            <p class="text-muted">Bendemeer Secondary School</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/rabbit.jpg" alt="">
+            <h4>Xiao Yue</h4>
+            <p class="text-muted">Idea Generator & Designer & Coder</p>
+            <p class="text-muted">Sinagpore Management University</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <a href="#">
+            <img src="img/logos/Bendemeer Secondary School.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/Enabling Village.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/heartcode_pink.png" alt="">
+          </a>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">Copyright © Project HeartCode 2019</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio Modals -->
+
+  <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Beneficiary</h2>
+                <p class="item-intro text-muted">Who are our target group</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/beneficiary.jpg" alt="">
+                <p>Blindness is a lack of vision, also known as <b>visual impairment</b>. It may also refer to a <b>loss of vision</b> that cannot be corrected with glasses or contact lenses. <b>Three-quarters</b> of all blindness can be prevented or treated. 
+                  Partial blindness means that the person has very limited vision. Complete blindness means that the person cannot see anything or has no perception of light. People with a vision worse than <b>20/200</b> are considered legally blind.</p>
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Causes</h2>
+                <p class="item-intro text-muted">What cause blindness</p>
+                <!-- <p>The leading causes of blindness are:</p> -->
+                <img class="img-fluid d-block mx-auto" style="width: 500px; height: 300px;" src="img/portfolio/definition.jpg" alt="">
+                
+                <ul style="text-align: left; font-size:larger">
+                    <li class="cool">Diabetes</li>
+                    <li>Age-related macular degeneration</li>
+                    <li>Accidents (such as chemical burns or sports injuries)</li>
+                    <li>Glaucoma</li>
+                    <li>Cataracts </li>
+                    <li>Trachoma</li>
+                    <li> Leprosy</li>
+                    <li>Vitamin A deficiency</li>
+                </ul>
+                
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Statistics</h2>
+                <p class="item-intro text-muted">Number of visually impact people</p>
+                <img class="img-fluid d-block mx-auto"  style="height:450px;width:450px;"src="img/portfolio/statistics.jpg" alt="">
+                <p>The estimated number of people visually impaired in the world stands at <b>285 million</b>, with <b>39 million</b> diagnosed blind. Asia alone accounts for <b>63.4% and 57.5% </b>of worldwide visual impairment (VI) and blindness, respectively.</p>
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+
+</html>

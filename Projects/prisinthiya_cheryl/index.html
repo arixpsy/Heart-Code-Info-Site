@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Heartcode Hearing Impaired</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+  <style>
+      html {
+        cursor: url("img/smolear.svg"), auto;
+      }
+
+      /* SWITCH */
+      .cube-switch {
+          border-radius:10px;
+          border:1px solid rgba(0,0,0,0.4);
+          box-shadow: 0 0 8px rgba(0,0,0,0.6), inset 0 100px 50px rgba(255,255,255,0.1);
+          /* Prevents clics on the back */
+          cursor:default;    
+          display: block;
+          height: 70px;
+          position: relative;
+          margin: 5% 0px 0px 10%;
+          overflow:hidden;
+          /* Prevents clics on the back */
+          pointer-events:none;
+          width: 70px;
+          white-space: nowrap;
+          background:#333;
+      }
+
+      /* The switch */
+      .cube-switch .switch {
+          border:1px solid rgba(0,0,0,0.6);
+          border-radius:0.7em;
+          box-shadow:
+          inset 0 1px 0 rgba(255,255,255,0.3),
+          inset 0 -7px 0 rgba(0,0,0,0.2),
+          inset 0 50px 10px rgba(0,0,0,0.2),
+          0 1px 0 rgba(255,255,255,0.2);
+          display:block;
+          width: 50px;
+          height: 50px;
+          margin-left:-25px;
+          margin-top:-25px;
+          position:relative;
+          top: 50%;
+          left: 50%;
+          width: 50px;
+      
+          background:#666;
+          transition: all 0.2s ease-out;
+
+          /* Allows click */
+          cursor:pointer;
+          pointer-events:auto;
+      }
+
+      /* SWITCH Active State */
+      .cube-switch.active {
+          /*background:#222;
+          box-shadow:
+          0 0 5px rgba(0,0,0,0.5),
+          inset 0 50px 50px rgba(55,55,55,0.1);*/
+      }
+
+      .cube-switch.active .switch {
+          background:#333;
+          box-shadow:
+          inset 0 6px 0 rgba(255,255,255,0.1),
+          inset 0 7px 0 rgba(0,0,0,0.2),
+          inset 0 -50px 10px rgba(0,0,0,0.1),
+          0 1px 0 rgba(205,205,205,0.1);
+      }
+
+      .cube-switch.active:after,
+      .cube-switch.active:before {
+          background:#333; 
+          box-shadow:
+          0 1px 0 rgba(255,255,255,0.1),
+          inset 1px 2px 1px rgba(0,0,0,0.5),
+          inset 3px 6px 2px rgba(200,200,200,0.1),
+          inset -1px -2px 1px rgba(0,0,0,0.3);
+      }
+
+      .cube-switch.active .switch:after,
+      .cube-switch.active .switch:before {
+          background:#222;
+          border:none;
+          margin-top:0;
+          height:1px;
+      }
+
+      .cube-switch .switch-state {
+          display: block;
+          position: absolute;
+          left: 35%;
+          color: #FFF;
+          font-size: 0.8em;
+          text-align: center;
+      }
+
+      /* SWITCH On State */
+      .cube-switch .switch-state.on {
+          bottom: 15%;
+      }
+
+      /* SWITCH Off State */
+      .cube-switch .switch-state.off {
+          top: 15%;
+      }
+
+      #light-bulb2 {
+      width: 150px;
+      height: 150px;
+      background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0 !important;
+      }
+
+      #light-bulb {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0 !important;
+      cursor: move;
+      }
+
+      #light-bulb4 {
+      width: 150px;
+      height: 150px;
+      background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0 !important;
+      }
+
+      #light-bulb3 {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0 !important;
+      cursor: move;
+      }
+
+      #walking{
+        position: absolute;
+        height: 132px;
+        width: 75px; 
+        background-image:url(
+      "https://www.caveofprogramming.com/images/capguy-walk.png"); 
+      }
+
+      #walking2{
+        position: absolute;
+        height: 132px;
+        width: 75px; 
+        background-image:url(
+      "https://www.caveofprogramming.com/images/capguy-walk.png"); 
+      }
+
+      #mail{
+        position: absolute;
+        height: 192px;
+        width: 135px; 
+        left: 1000px;
+      }
+
+      button{
+        margin-top: 150px; 
+      }
+
+      .facing-left{
+        transform: scaleX(-1); 
+      }
+
+.perspective
+{background: url("http://dc428.4shared.com/img/QWu4ziBq/s3/doorBorder.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            display: inline;
+            height: 274px;
+            width: 147px;
+            margin-left: 0px;
+            -webkit-perspective: 450;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .thumb
+        {
+            background: url("http://dc428.4shared.com/img/-vayshJ-/s3/ClassDoor.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 147px;
+            height: 274px;
+            position: absolute;
+            box-sizing: border-box;
+            border-radius: 3px;
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, .0) inset;
+            transition: 1s transform linear;
+            transform-origin: left;
+            cursor: pointer;
+        }
+        
+        .thumbOpened
+        {
+            transform: rotateY(-90deg);
+            transform-origin: 8px;
+            transition: .5s linear;
+        }
+    @keyframes go {
+      100%{
+        opacity:1;
+        transform:rotateY(0deg);
+      }
+    }
+    </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">HeartCode</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" style="color: black;" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" style="color: black;" href="#projects">Challenges</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" style="color: black;" href="#solution">Solution</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Hearing Imapairment</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">While it is incredibly difficult to understand exactly what it’s like to be deaf, most individuals are aware that hearing difficulty comes with a unique set of challenges. This forces those who are deaf to experience the world in an entirely different way than the rest of the population, and not always how you'd expect.</h2>
+       
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <img src="img/deafsymbol.png" class="img-fluid" style="width: 20%; margin-bottom: 50px;" alt="">
+        </div>
+        <div class="col-lg-7 mx-auto">
+          <h2 class="text-white mb-4">What is hearing impaired</h2>
+          <p class="text-white-50">Hearing problems can affect the ability to learn spoken language and in adults it can create difficulties with social interaction and at work.In some people, particularly older people, hearing loss can result in loneliness.Hearing loss can be temporary or permanent.</p>
+        </div>
+      </div>
+      </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+              <img class="img-fluid mb-3 mb-lg-0" src="img/darkroom.jpg" width=100% alt="">
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                    <h4 class="text-white mb-0">Difficult to communicate during the night and dark spaces.</h4>
+                    <p class="text-white-50 mb-0">The deaf rely almost exclusively on visual stimuli, like lip reading or sign language, to communicate with others. Even dimly lit rooms can pose massive problems for the hard of hearing.</p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/grpdis2.jpg" width=100% alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Feeling left out among the Friends</h4>
+                <p class="mb-0 text-white-50">Not many deaf people can lip read,but also talking about anyone while they're right there is a pretty offensive thing to do. This can make already difficult social interactions much more so, leading to feelings of alienation and anxiety on the part of a deaf person.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/sloth.gif" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">People tend to slow down their speech in front of them</h4>
+                <p class="mb-0 text-white-50"><p class="mb-0 text-white-50">When someone realizes they’re interacting with a hearing impaired person, they often switch to a slower form of speech. While it’s done with the best intentions, it can actually hinder lip reading. Over time, the hearing impaired have learned to understand words when people speak naturally, so slowing it down intentionally can result in miscommunication.</p></p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+              <h2 class="text-white mb-5">How does it feels like to be a deaf?</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ecmCHXZkTGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p class="text-white"> This video explains about the daily challenages a hearing impaired student faces and how she feels about it </p>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="solution" class="contact-section bg-black" style="padding: 0 !important;">
+    <div class="container" style="padding: 0 !important;">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <h2 class="text-white mb-5">Solutions</h2>
+        <p class="text-white-50">Aside from the challenages mentioned above, hearing impaired usually rely on visual clues in their daily lifes. Hence we reccommend the following solutions:)</p>
+      </div>
+      <div class="row" style="padding: 0 !important;">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-bell text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Door Bell Bulb</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                It notifies the hearing impaired with the bulb blinking, which indicates the presence of someone at the door
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+               <h4>🙋🏻‍♀️</h4>
+              <h4 class="text-uppercase m-0">Far Sight Sensor</h4>
+              <hr class="my-4">
+              <div class="small text-black-50"> With only visual clues and, in some instances, the vibrations of the ground, deaf people can easily get frightened if a person comes up behind them unexpectedly.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <h4 class="text-white mb-5 text-center">Door Bell Bulb Simulation</h2>
+      <p class="text-white text-center">Press the doorbell!</p>
+      <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+              <p id="result" class="text-white" style="float: right; width: 100%; position: absolute;"></p><br>
+              <div id="light-bulb" class="off ui-draggable">
+                <div id="light-bulb2" style="opacity: 0;"></div>
+              </div>
+
+              <div id="walking" style="margin-top: 120px;"></div>
+              <div class="perspective" onclick="openDoor(this)" style="left: 700px;">
+                  <div class="thumb">
+                  </div>
+              </div>
+
+              <div href="" id="switch1" class="cube-switch" style="float: right; left: 530px;">
+                  <span class="switch">
+                      <span class="switch-state off"></span>
+                      <span class="switch-state on" style="margin-bottom: 7px;"><i class="fas fa-bell text-white mb-2"></i></span>
+                  </span>
+              </div>
+              <img id="mail" src="img/mailman.png" style="margin-top: 120px;"/>
+              <div style="position: relative; margin-top: 120px;">
+                <button id = "go" class="btn btn-primary btn-xs"> Walk </button>
+                <button id = "left" class="btn btn-primary btn-xs"> Left </button> 
+                <button id = "right" class="btn btn-primary btn-xs"> Right </button>
+                <label class="text-white"  style="padding-top: 50px;">Increase his walking speed!</label> <input id = "slider" class="custom-range" type = "range" min = 5 max = 15></input>
+              </div>
+            </div>
+        </div>
+        <br><br>
+        <h4 class="text-white mb-5 text-center">Far Sight Sensor Simulation</h2>
+        <p class="text-white text-center">Approach The Man</p>
+        <div class="row" >
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div id="walking2"></div>
+                <img src ="img/boy.png" style="width: 75.5px; height:150px; float: right; left:50px;"/><br>
+                <p id="result2" class="text-white" style="position: absolute; float:right; left: 800px;"></p>
+                <div id="light-bulb3" class="off ui-draggable" style="position: absolute; float: right; left:650px;">
+                    <div id="light-bulb4" style="opacity: 0;"></div>
+                </div>
+
+                <div href="" id="switch2" class="cube-switch" style="float: right; left: 530px;">
+                    <span class="switch">
+                        <span class="switch-state off"></span>
+                        <span class="switch-state on" style="margin-bottom: 7px;"><i class="fas fa-bell text-white mb-2"></i></span>
+                    </span>
+                </div>
+                <div style="position: absolute;">
+                  <button id = "go2" class="btn btn-primary btn-xs"> Walk </button>
+                  <button id = "left2" class="btn btn-primary btn-xs"> Left </button> 
+                  <button id = "right2" class="btn btn-primary btn-xs"> Right </button>                  
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Prisinthiya
+    </div>
+  </footer>
+
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          function displayInfo(url) {
+              $.get(url, function (data) {
+                  // console.log(data, typeof data);
+                  // var url = data.eddystoneUrl.url;
+                  // console.log(url);
+                  // var numClicks = url.split("/");
+                  // console.log(url.split("/"));
+                  // console.log(numClicks);
+                  var message = "";
+                  if (data == "1" || data == "0"){
+                    if (data == "1"){
+                      message = "'Someone rang your doorbell!''";
+                      $('.cube-switch').addClass('active');
+                      $('#light-bulb2').css({'opacity': '1'});
+                    }else{
+                      message = "'No one rang your doorbell!'"
+                      $('.cube-switch').removeClass('active');
+                      $('#light-bulb2').css({'opacity': '0'});
+                    }
+
+                    $("#result").html(message);
+                  }else{
+                    if (data == "2"){
+                      message = "'Someone is approaching!''";
+                      $('.cube-switch').addClass('active');
+                      $('#light-bulb4').css({'opacity': '1'});
+                    }else{
+                      $('.cube-switch').addClass('active');
+                      $('#light-bulb4').css({'opacity': '0'});
+                    }
+                    $("#result2").html(message);
+                  }
+                  
+                  return message;
+              });
+          }
+  
+          setInterval(function(){
+              displayInfo("http://192.168.137.242:1880/test2");
+          }, 1000);
+
+          setInterval(function(){
+              displayInfo("http://192.168.137.242:1880/test3");
+          }, 1000);
+         
+      });
+
+
+      $('#switch1.cube-switch .switch').click(function() {
+      if ($('.cube-switch').hasClass('active')) {
+          message = "'No one rang your doorbell!'"
+          $('.cube-switch').removeClass('active');
+          $('#light-bulb2').css({'opacity': '0'});
+      } else {
+          message = "'Someone rang your doorbell!''";
+          $('.cube-switch').addClass('active');
+          $('#light-bulb2').css({'opacity': '1'});
+      }
+
+      $("#result").html(message);
+      });
+
+      $('#switch2.cube-switch .switch').click(function() {
+      if ($('.cube-switch').hasClass('active')) {
+          message2 = "";
+          $('.cube-switch').removeClass('active');
+          $('#light-bulb4').css({'opacity': '0'});
+      } else {
+          message2 = "'Someone is approaching!''";
+          $('.cube-switch').addClass('active');
+          $('#light-bulb4').css({'opacity': '1'});
+      }
+
+      $("#result2").html(message2);
+      });
+
+      $(document).ready(function(){
+        var leftButton = $("#left"); 
+        var rightButton = $("#right"); 
+        var goButton = $("#go"); 
+        var walking = false; 
+        var stepNum = 1; 
+        var stepTimeout; 
+        var divWindow = $("#walking"); 
+        var divPosition = 0; 
+        var direction = 1; 
+        var speed = 5; 
+        var slider = document.getElementById("slider");  
+        
+        
+      
+        goButton.click(function(){
+          walking = (!walking) ? true : false; 
+          if(walking){
+            goButton.html("Stop"); 
+            step();  
+          } 
+          else{
+            goButton.html("Walk"); 
+            clearTimeout(stepTimeout); 
+          }
+        });
+        
+        leftButton.click(function(){
+          divWindow.addClass("facing-left"); 
+          direction = -1; 
+        }); 
+        
+        rightButton.click(function(){
+          divWindow.removeClass("facing-left"); 
+          direction = 1; 
+        }); 
+        
+        function step(){
+          divWindow.css("background-position", (-75 * stepNum) + "px"); 
+          speed = slider.value; 
+          divPosition = divPosition + (direction * speed);
+          divWindow.css("left", divPosition + "px"); 
+          stepNum = (stepNum + 1) % 8; 
+          stepTimeout = setTimeout(step, 750/speed); 
+        }; 
+      }); 
+
+
+      $(document).ready(function(){
+        var leftButton = $("#left2"); 
+        var rightButton = $("#right2"); 
+        var goButton = $("#go2"); 
+        var walking2 = false; 
+        var stepNum = 1; 
+        var stepTimeout; 
+        var divWindow = $("#walking2"); 
+        var divPosition = 0; 
+        var direction = 1; 
+        var speed = 5; 
+        var slider = document.getElementById("slider");  
+        
+        
+      
+        goButton.click(function(){
+          walking2 = (!walking2) ? true : false; 
+          if(walking2){
+            goButton.html("Stop"); 
+            step();  
+          } 
+          else{
+            goButton.html("Walk"); 
+            clearTimeout(stepTimeout); 
+          }
+        });
+        
+        leftButton.click(function(){
+          divWindow.addClass("facing-left"); 
+          direction = -1; 
+        }); 
+        
+        rightButton.click(function(){
+          divWindow.removeClass("facing-left"); 
+          direction = 1; 
+        }); 
+        
+        function step(){
+          divWindow.css("background-position", (-75 * stepNum) + "px"); 
+          speed = slider.value; 
+          divPosition = divPosition + (direction * speed);
+          divWindow.css("left", divPosition + "px"); 
+          stepNum = (stepNum + 1) % 8; 
+          stepTimeout = setTimeout(step, 750/speed); 
+        }; 
+      }); 
+      function openDoor(field) {
+            var y = $(field).find(".thumb");
+            var x = y.attr("class");
+            if (y.hasClass("thumbOpened")) {
+                y.removeClass("thumbOpened");
+            }
+            else {
+                $(".thumb").removeClass("thumbOpened");
+                y.addClass("thumbOpened");
+            }
+        }
+  </script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+</body>
+
+</html>

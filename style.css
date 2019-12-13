@@ -263,7 +263,7 @@ footer > p{
     background-image:url('./assets/images/orgcomm-1.JPG');
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     height: 100%;
     width:100%;
     position: absolute;

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .backDoor {
+            background-image: url("img/house.jpg");
+            position:relative;
+            width:200px;
+            
+            margin: 0 auto;
+            margin-top:50px; 
+            }
+
+            .door {
+            transform-origin: left;
+            /*Speed of the Door animation*/
+            transition: all 0.5s ease-in-out;
+            }
+
+            .doorOpen {
+            /*prespectiv creates the door open effect*/
+            transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+            }    
+        </style>
+
+        <link href="css/bootstrap2-toggle.min.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="backDoor">
+            <img src="img/door.jpg" class="door"/>  
+        </div>
+
+        <input class=".toggle" type="checkbox" checked data-toggle="toggle">
+        <script>
+            var element = document.querySelector(".door");
+            element.addEventListener("click", toggleDoor);
+
+            function toggleDoor() {
+            element.classList.toggle("doorOpen");
+            }
+        </script>
+    </body>
+</html>

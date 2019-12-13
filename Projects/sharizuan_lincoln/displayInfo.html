@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<h1 id="result">
+</h1>
+
+<script>
+    $(document).ready(function () {
+        function displayInfo(url) {
+            $.get(url, function (data) {
+                // console.log(data, typeof data);
+                var url = data.eddystoneUrl.url;
+                // console.log(url);
+                var numClicks = url.split("//")[1];
+                // console.log(url.split("/"));
+                // console.log(numClicks);
+                $("#result").html("Micro:bit was clicked " + numClicks + " times");
+                return data;
+            });
+        }
+
+        setInterval(function(){
+            displayInfo("http://192.168.137.200:1880/test");
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>

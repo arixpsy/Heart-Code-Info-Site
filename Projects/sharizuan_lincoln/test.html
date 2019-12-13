@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <title>API</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+    var range 
+    var demoClick = false
+    $(document).ready(function () {
+        function displayInfo(url) {
+            $.get(url, function (data) {
+                //console.log(data, typeof data);
+               // console.log(data)
+                range = data["range"]
+                console.log(range)
+               // var url = data.eddystoneUrl.url;
+                // var numClicks = url.split("//")[1];
+                // $("#result").html("Range of item " + range);
+                console.log("This is the range" + range)
+                 if (range<=50) {
+                    // document.getElementById("NotSafeIcon").classList.remove('fas fa-shield-alt fa-9x');
+                    //     document.getElementById("NotSafeIcon").classList.add('fas fa-exclamation-triangle fa-9x');
+                        document.getElementById("NotSafeIcon").style.display = "inline"
+                        document.getElementById("SafeIcon").style.display = "none"
+                        if(demoClick==true){
+                                document.getElementById("badThief").style.display = "inline" 
+                            }
+
+                    }
+                    else{
+                        // document.getElementById("NotSafeIcon").classList.remove('fas fa-exclamation-triangle fa-9x');
+                        // document.getElementById("NotSafeIcon").classList.add('fas fa-shield-alt fa-9x');
+                        document.getElementById("SafeIcon").style.display = "inline"
+                        document.getElementById("NotSafeIcon").style.display = "none"
+                    }
+
+                document.getElementById('data').innerHTML = range;
+                 return data;
+
+            });
+
+        }
+
+        setInterval(function(){
+            displayInfo("http://192.168.137.45:1880/getRange");
+        }, 1000);
+    });
+
+    $(document).ready(function () {
+        function displayPolice(url) {
+            $.get(url, function (dataShake) {
+                if (demoClick == true) {         
+                    if (dataShake == 1) {
+                        document.getElementById('badThief').classList.add("shake");
+                        document.getElementById('innocentStick').classList.add("shake");
+                        document.getElementById("police").style.display = "inline";
+                    }
+                }
+                 return;
+
+            });
+
+        }
+
+        setInterval(function(){
+            displayPolice("http://192.168.137.45:1880/getFight");
+        }, 1000);
+    });
+
+
+    function showStick(){
+        demoClick = true
+        document.getElementById("innocentStick").style.display = "inline" 
+    }
+    function resetDemo(){
+        document.getElementById('innocentStick').classList.remove("shake");
+        document.getElementById('badThief').classList.remove("shake");
+        document.getElementById("innocentStick").style.display = "none";
+        document.getElementById("badThief").style.display = "none";
+        document.getElementById("police").style.display = "none";
+    }
+
+
+    </script>
+
+
+
+
+</head>
+
+<style>
+
+.shake{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+</style>
+
+
+<body>
+    <pre id="data"></pre>
+    <p id="testing"></p>
+    <i style="color:red" id = "NotSafeIcon" class="fas fa-exclamation-triangle fa-9x"></i>
+    <i style="color:green "id = "SafeIcon" class="fas fa-shield-alt fa-9x"></i>
+
+    <br><br><br><br>
+
+    <button onclick="showStick()">Robbery Demostration</button>
+    <button onclick="resetDemo()">Reset Demostration</button>
+    <br><br><br><br>
+
+    <img id="innocentStick"style="display: none;"src="img/simulation/Stickmen .png">
+    <img id="badThief"style="display: none;" src="img/simulation/Thief.png">
+    <img id="police" style="display: none;" src="img/simulation/Police.png">
+
+
+</body>
+
+
+</html>
