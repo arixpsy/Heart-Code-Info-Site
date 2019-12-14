@@ -8,10 +8,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Poppins', sans-serif; 
 }
-
 .nav {
     position: fixed;
     z-index: 100;
@@ -110,7 +108,7 @@ section{
     height:100vh;
 }
 .section-small{
-    height: 300px;
+    height: 35vh;
 }
 #background-banner{
     background-image:url('./assets/images/projectheartcode-2019.png');
@@ -136,11 +134,15 @@ section{
     z-index: 10;
     margin-top:45px;
     text-align: center;
-    padding: 30px 20px 0 20px;
+    padding: 0px 20px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 #banner-content > h1 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 2rem;
 }
 #banner-content > p{
@@ -209,23 +211,23 @@ footer > p{
     color: black;
 }
 .project-section{
-    padding: 20px 0 20px 0;
+    padding: 0;
     text-align: center;
 } 
-.project-list{
+.project-grid{
     display: grid;
     grid-template-columns: 1fr;
     width: min-content;
     margin:auto;
 }
 .project-section > h2{
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 .project-tile-overlay{
     position: absolute;
     height:100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     z-index: 5;
     color: white;
     opacity: 0;
@@ -264,9 +266,35 @@ footer > p{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-position-y: 35%;
     height: 100%;
     width:100%;
     position: absolute;
+}
+.aboutus-section{
+    text-align: center;
+}
+.aboutus-grid{
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas: "aboutus" "vision" "mission" "ourstory";
+}
+.about-us-tile > p{
+    padding: 10px 20px;
+    text-align: left;
+}
+.about-us-tile.aboutus{
+    grid-area: aboutus;
+}
+.about-us-tile.vision{
+    grid-area: vision;
+}
+.about-us-tile.mission{
+    grid-area: mission;
+}
+.about-us-tile.ourstory{
+    grid-area: ourstory;
 }
 @media screen and (min-width: 700px) {
     .nav-inner{
@@ -301,14 +329,13 @@ footer > p{
         display: none;
     }
     #banner-content{
-        padding: 100px 100px 0 100px;
+        padding: 0px 125px;
     }
-    
-    .project-list{
+    .project-grid{
         grid-template-columns: repeat(3, 1fr);
     }
     .project-section{
-        padding: 30px 50px 30px 50px;
+        padding: 5px 50px 30px 50px;
     } 
     .project-tile{
         text-align: initial;
@@ -323,9 +350,19 @@ footer > p{
         color: white;
         z-index:10;
     }
+    .aboutus-grid{
+        grid-template-columns: 10vw 40vw 40vw 10vw;
+        row-gap: 20px;
+        grid-template-areas: ". aboutus aboutus ." ". vision mission ." ". ourstory ourstory .";
+    }
 }
 @media screen and (min-width: 900px) {
-    .project-list{
+    .project-grid{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (min-width: 1100px) {
+    .project-grid{
+        grid-template-columns: repeat(5, 1fr);
     }
 }
