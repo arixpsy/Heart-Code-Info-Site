@@ -282,7 +282,7 @@ footer > p{
 }
 .about-us-tile > p{
     padding: 10px 20px;
-    text-align: left;
+    text-align: justify;
 }
 .about-us-tile.aboutus{
     grid-area: aboutus;
@@ -295,6 +295,34 @@ footer > p{
 }
 .about-us-tile.ourstory{
     grid-area: ourstory;
+}
+.teamBanner{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width:100%;
+    position: absolute;
+}
+#background-org2019{
+    background-image:url('./assets/images/orgcomm-1.JPG');
+    background-position-y: 35%;
+}
+.team-section{
+    text-align: center;
+}
+.team-grid{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+.member-tile{
+    padding:10px;
+}
+.member-tile > img {
+    width: calc(100% - 40px);
+    height: auto;
+    margin: 0 20px 0 20px;
+    border-radius: 50%;
 }
 @media screen and (min-width: 700px) {
     .nav-inner{
@@ -354,6 +382,19 @@ footer > p{
         grid-template-columns: 10vw 40vw 40vw 10vw;
         row-gap: 20px;
         grid-template-areas: ". aboutus aboutus ." ". vision mission ." ". ourstory ourstory .";
+    }
+    .team-grid{
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+        width: min-content;
+    }
+    .member-tile{
+        width: min-content;
+        padding:10px;
+    }
+    .member-tile > img {
+        width: 150px;
+        border-radius: 50%;
     }
 }
 @media screen and (min-width: 900px) {
