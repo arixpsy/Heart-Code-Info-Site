@@ -324,6 +324,30 @@ footer > p{
     margin: 0 20px 0 20px;
     border-radius: 50%;
 }
+.partners-section{
+    padding-top: 45px;
+    text-align: center;
+}
+.partners-section > h1{
+    margin-top: 15px;
+}
+.partners-grid{
+    display: grid;
+    grid-template-columns: 100vw;
+}
+.beneficiary-tile , .partner-tile{
+    padding:10px;
+}
+.beneficiary-tile > p, .partner-tile > p{
+    padding-top: 25px;
+    max-width: 600px;
+    margin: auto;
+}
+.partner-tile > img, .beneficiary-tile > img{
+    width: 100%;
+    max-width: 300px;
+    /* max-height: 300px; */
+}
 @media screen and (min-width: 700px) {
     .nav-inner{
         display: grid;
@@ -384,7 +408,7 @@ footer > p{
         grid-template-areas: ". aboutus aboutus ." ". vision mission ." ". ourstory ourstory .";
     }
     .team-grid{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin: auto;
         width: min-content;
     }
@@ -396,14 +420,28 @@ footer > p{
         width: 150px;
         border-radius: 50%;
     }
+    .partners-grid{
+        margin: 0 auto;
+        grid-template-columns: 40vw 40vw;
+        align-items: baseline;
+        width: min-content;
+    }
+    .partners-section{
+        margin-bottom: 15px;
 }
 @media screen and (min-width: 900px) {
     .project-grid{
         grid-template-columns: repeat(4, 1fr);
     }
+    .team-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 @media screen and (min-width: 1100px) {
     .project-grid{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .team-grid{
         grid-template-columns: repeat(5, 1fr);
     }
 }
