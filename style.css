@@ -428,6 +428,7 @@ footer > p{
     }
     .partners-section{
         margin-bottom: 15px;
+    }
 }
 @media screen and (min-width: 900px) {
     .project-grid{
@@ -443,5 +444,29 @@ footer > p{
     }
     .team-grid{
         grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 1440px){
+    #background-banner{
+        background-image:url('./assets/images/projectheartcode-2019-1440.png');
+    }
+    #background-aboutus{
+        background-image:url('./assets/images/orgcomm-1-1440.JPG');
+    }
+    #background-org2019{
+        background-image:url('./assets/images/orgcomm-1-1440.JPG');
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #background-banner{
+        background-image:url('./assets/images/projectheartcode-2019-1024.png');
+    }
+    #background-aboutus{
+        background-image:url('./assets/images/orgcomm-1-1024.JPG');
+    }
+    #background-org2019{
+        background-image:url('./assets/images/orgcomm-1-1024.JPG');
     }
 }
